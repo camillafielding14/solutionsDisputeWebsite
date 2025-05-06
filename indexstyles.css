@@ -1,0 +1,87 @@
+/* 🌿 Color Scheme */
+:root {
+    --light-gray: #F2F3F1;
+    --beige: #DCCFBF;
+    --gray: #A1A69F;
+    --rust: #B37B64;
+    --olive-green: #66756C;
+}
+
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--light-gray);
+    color: var(--gray);
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading */
+.container h1 {
+    color: var(--olive-green);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Paragraph */
+.container p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: var(--gray);
+}
+
+/* Dispute Options Container */
+.dispute-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Dispute Option Buttons */
+.dispute-btn {
+    background-color: var(--olive-green);
+    color: var(--light-gray);
+    text-decoration: none;
+    padding: 14px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.dispute-btn:hover {
+    background-color: var(--gray);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px 20px;
+    }
+
+    .dispute-btn {
+        font-size: 1em;
+        padding: 12px;
+    }
+
+    .container h1 {
+        font-size: 2em;
+    }
+}

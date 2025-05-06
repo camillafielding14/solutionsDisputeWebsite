@@ -1,0 +1,207 @@
+/* 🌿 New Color Scheme */
+:root {
+    --light-gray: #F2F3F1;   /* Light gray background */
+    --beige: #DCCFBF;        /* Beige */
+    --gray: #A1A69F;         /* Gray */
+    --rust: #B37B64;         /* Rust */
+    --olive-green: #66756C;  /* Olive Green */
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--light-gray); /* Light gray background */
+    color: var(--gray); /* Gray text */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    color: var(--olive-green); /* Olive green for main heading */
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: var(--rust); /* Rust for subheadings */
+    margin-bottom: 10px;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1.1em;
+    color: var(--olive-green); /* Olive green for labels */
+}
+
+/* Inputs and Selects */
+input, select {
+    font-size: 1em;
+    padding: 12px;
+    border: 2px solid var(--olive-green); /* Olive green border for inputs */
+    border-radius: 8px;
+    background-color: var(--light-gray);
+    color: var(--gray);
+}
+
+input:focus, select:focus {
+    border-color: var(--rust); /* Rust border on focus */
+    outline: none;
+}
+
+/* Button */
+button {
+    background-color: var(--rust); /* Rust button */
+    color: var(--light-gray); /* Light gray text on button */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #9E5A3A; /* Slightly darker rust on hover */
+}
+
+/* Output Container */
+.output-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Output Boxes */
+.output-box {
+    background-color: var(--light-gray);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--olive-green);
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.output-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: var(--olive-green); /* Olive green for output box titles */
+}
+
+.output-box pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 1em;
+    background-color: transparent;
+    color: var(--olive-green);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Copy Button */
+.copy-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--olive-green);
+    color: var(--light-gray);
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.copy-btn:hover {
+    background-color: var(--gray);
+}
+/* Navigation Bar */
+.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--olive-green);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.main-nav a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: .7em;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--beige);
+    text-decoration: underline;
+}
+
+.copied-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #9E5A3A;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeInOut 1s ease;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    input, select, button {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}

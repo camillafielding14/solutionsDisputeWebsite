@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Per Service Dispute</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../assets/orange-leaf-logo.png">
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/monthly-billing.html">Monthly Billing</a></li>
+            <li><a href="../html/cxl-fee.html">CXL Fee</a></li>
+            <li><a href="../html/billed-after-service.html">Per Service</a></li>
+            <li><a href="../html/disute-fee.html">Service Fee</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Per Service</h1>
+
+        <form id="billingForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="amount">Amount ($$$$):</label>
+            <input type="text" id="amount" name="amount" required>
+
+            <label for="subType">Subscription Type:</label>
+            <input type="text" id="subType" name="subType" required>
+
+            <label for="chargeDate">Charge Date:</label>
+            <input type="date" id="chargeDate" name="chargeDate" required>
+
+            <label for="agreementDate">Agreement Date:</label>
+            <input type="date" id="agreementDate" name="agreementDate" required>
+
+            <label for="firstServiceDate">First Service Date:</label>
+            <input type="date" id="firstServiceDate" name="firstServiceDate" required>
+
+            <label for="reminderDate">Reminder Date:</label>
+            <input type="date" id="reminderDate" name="reminderDate" required>
+
+            <label for="serviceDate">Service Date:</label>
+            <input type="date" id="serviceDate" name="serviceDate" required>
+
+            <label for="billingDate">Billing Date:</label>
+            <input type="date" id="billingDate" name="billingDate" required>
+
+            <label for="saleType">Sale Type:</label>
+            <select id="saleType" name="saleType" onchange="toggleVerifyVideo()" required>
+                <option value="">--Select--</option>
+                <option value="door">Door-to-Door</option>
+                <option value="office">Office</option>
+            </select>
+
+            <div id="verifyVideoContainer" style="display: none;">
+                <label for="verifyVideo">Is there a valid verify video?</label>
+                <select id="verifyVideo" name="verifyVideo">
+                    <option value="">--Select--</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="generateBillingInfo()">Generate Dispute Info</button>
+        </form>
+
+        <div id="outputContainer" class="output-container"></div>
+    </div>
+
+    <script src="../js/monthly-billing.js"></script>
+</body>
+</html>
